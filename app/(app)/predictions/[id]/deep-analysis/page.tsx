@@ -42,7 +42,7 @@ export default function DeepAnalysisPage() {
 
   return (
     <div className="max-w-content">
-      <div className="mb-10">
+      <div className="mb-6 md:mb-10">
         <p className="text-[13px] text-muted mb-1">決策內容</p>
         <p className="font-serif text-[19px] text-ink mb-4">{prediction.decisionContent}</p>
         {prediction.quickReviewResult && (

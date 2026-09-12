@@ -57,54 +57,54 @@ export function PredictionForm() {
   }
 
   return (
-    <div className="flex flex-col gap-7">
+    <div className="flex flex-col gap-4 md:gap-7">
       <div>
-        <label className="block text-[15px] font-semibold text-ink mb-2">決策／行動</label>
+        <label className="block text-[15px] font-semibold text-ink mb-1.5">決策／行動</label>
         <textarea
           value={decisionContent}
           onChange={(e) => setDecisionContent(e.target.value)}
           placeholder="例如：開始經營個人品牌網站"
-          rows={4}
-          className={fieldClass + " min-h-[100px]"}
+          rows={3}
+          className={fieldClass + " min-h-[96px]"}
         />
       </div>
 
       <div>
-        <label className="block text-[15px] font-semibold text-ink mb-2">我預期會發生什麼</label>
+        <label className="block text-[15px] font-semibold text-ink mb-1.5">我預期會發生什麼</label>
         <textarea
           value={expectedOutcome}
           onChange={(e) => setExpectedOutcome(e.target.value)}
           placeholder="例如：三個月內每月會有至少 5 個新諮詢案"
-          rows={4}
-          className={fieldClass + " min-h-[100px]"}
+          rows={3}
+          className={fieldClass + " min-h-[96px]"}
         />
       </div>
 
       <div>
-        <label className="block text-[15px] font-semibold text-ink mb-2">成功判斷標準</label>
+        <label className="block text-[15px] font-semibold text-ink mb-1.5">成功判斷標準</label>
         <textarea
           value={successCriteria}
           onChange={(e) => setSuccessCriteria(e.target.value)}
           placeholder="例如：以實際收到的諮詢數量為準，達到 5 件以上即視為成功"
-          rows={4}
-          className={fieldClass + " min-h-[100px]"}
+          rows={3}
+          className={fieldClass + " min-h-[96px]"}
         />
       </div>
 
       <div>
-        <label className="block text-[15px] font-semibold text-ink mb-2">我為什麼認為會成功</label>
+        <label className="block text-[15px] font-semibold text-ink mb-1.5">我為什麼認為會成功</label>
         <textarea
           value={successReason}
           onChange={(e) => setSuccessReason(e.target.value)}
           placeholder="例如：因為我的目標受眾明確，且內容能解決他們的痛點"
-          rows={4}
-          className={fieldClass + " min-h-[100px]"}
+          rows={3}
+          className={fieldClass + " min-h-[96px]"}
         />
       </div>
 
       <div>
-        <label className="block text-[15px] font-semibold text-ink mb-2">回顧週期</label>
-        <div className="flex flex-wrap items-center gap-3">
+        <label className="block text-[15px] font-semibold text-ink mb-1.5">回顧週期</label>
+        <div className="flex flex-wrap items-center gap-2">
           {PERIOD_OPTIONS.map((p) => (
             <button
               key={p}
@@ -138,9 +138,9 @@ export function PredictionForm() {
         </div>
 
         {previewDate && (
-          <div className="mt-4 rounded-sm bg-surface px-4 py-3">
+          <div className="mt-3 rounded-sm bg-surface px-4 py-2.5">
             <p className="text-[13px] text-muted">預計回顧日期</p>
-            <p className="mt-1 text-[16px] text-ink">
+            <p className="mt-0.5 text-[16px] text-ink">
               {formatDateLong(previewDate)}（{effectivePeriod} 天後）
             </p>
           </div>

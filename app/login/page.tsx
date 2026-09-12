@@ -33,7 +33,7 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex flex-col md:flex-row">
-      <div className="relative md:w-[40%] bg-ink text-paper px-8 py-12 md:px-14 md:py-16 flex flex-col justify-between overflow-hidden">
+      <div className="relative md:w-[40%] bg-ink text-paper px-6 py-6 md:px-14 md:py-16 flex flex-col justify-between overflow-hidden">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.06]"
           style={{
@@ -41,12 +41,19 @@ export default function LoginPage() {
               "repeating-linear-gradient(135deg, #F7F5F0 0px, #F7F5F0 1px, transparent 1px, transparent 28px)",
           }}
         />
-        <div className="relative">
+        <div className="relative hidden md:block">
           <div className="font-serif text-[15px] tracking-wide opacity-80">PDA</div>
           <div className="mt-1 h-px w-8 bg-paper/30" />
         </div>
 
-        <div className="relative">
+        <div className="relative md:hidden">
+          <span className="font-serif text-[13px] tracking-wide opacity-70">PDA</span>
+          <h1 className="mt-0.5 font-serif text-[17px] font-semibold leading-snug">
+            個人決策回饋分析法工具
+          </h1>
+        </div>
+
+        <div className="relative hidden md:block">
           <h1 className="font-serif text-[32px] md:text-[42px] font-semibold leading-tight">
             個人決策
             <br />
@@ -59,20 +66,20 @@ export default function LoginPage() {
           </p>
         </div>
 
-        <div className="relative text-[13px] opacity-60 leading-relaxed">
+        <div className="relative text-[13px] opacity-60 leading-relaxed hidden md:block">
           持續記錄，
           <br />
           持續成為更了解自己的人。
         </div>
       </div>
 
-      <div className="flex-1 bg-paper flex items-center justify-center px-6 py-14 md:px-16">
+      <div className="flex-1 bg-paper flex items-start md:items-center justify-center px-6 pt-8 pb-6 md:py-14 md:px-16">
         <div className="w-full max-w-sm">
-          <h2 className="font-serif text-[22px] md:text-[26px] font-semibold text-ink mb-8">
+          <h2 className="font-serif text-[22px] md:text-[26px] font-semibold text-ink mb-5 md:mb-8">
             登入你的帳號
           </h2>
 
-          <div className="mb-5">
+          <div className="mb-4">
             <label className="block text-[15px] font-semibold text-ink mb-2">電子郵件</label>
             <input
               type="email"
@@ -83,7 +90,7 @@ export default function LoginPage() {
             />
           </div>
 
-          <div className="mb-8">
+          <div className="mb-5">
             <label className="block text-[15px] font-semibold text-ink mb-2">密碼</label>
             <div className="relative">
               <input
@@ -115,11 +122,11 @@ export default function LoginPage() {
             {loading ? "登入中…" : "登入"}
           </button>
 
-          <p className="mt-8 text-center text-[13px] text-muted leading-relaxed">
+          <p className="mt-5 md:mt-8 text-center text-[13px] text-muted leading-relaxed">
             —<br />
             持續記錄，持續成為更好的自己。
           </p>
-          <p className="mt-3 text-center text-[12px] text-muted">{VERSION_TAG}</p>
+          <p className="mt-2 md:mt-3 text-center text-[12px] text-muted">{VERSION_TAG}</p>
         </div>
       </div>
     </div>

@@ -25,7 +25,7 @@ export default function HomePage() {
           : "目前沒有待處理的卡片，可以寫下一個新的判斷。"}
       </p>
 
-      <div className="mt-10 flex flex-col sm:flex-row gap-3">
+      <div className="mt-6 md:mt-10 flex flex-col sm:flex-row gap-3">
         <Link
           href="/reviews"
           className="min-h-[48px] flex items-center justify-center px-6 rounded-sm border border-line text-[15px] text-ink hover:border-ink transition-colors"
@@ -46,7 +46,7 @@ export default function HomePage() {
         </Link>
       </div>
 
-      <p className="mt-16 text-[14px] text-muted italic">
+      <p className="mt-8 md:mt-16 text-[14px] text-muted italic">
         「真正的成長，來自於誠實地回顧。」
       </p>
     </div>

@@ -13,10 +13,10 @@ export default function AppShellLayout({ children }: { children: React.ReactNode
           <AppSidebar />
           <div className="flex-1 flex flex-col min-w-0">
             <TopBar />
-            <main className="flex-1 px-5 md:px-12 py-8 md:py-12 pb-24 md:pb-12">
+            <main className="flex-1 px-5 md:px-12 py-5 md:py-12 pb-20 md:pb-12">
               <div className="max-w-content mx-auto w-full">
                 {children}
-                <footer className="mt-16 pt-6 border-t border-line text-[12px] text-muted">
+                <footer className="mt-8 md:mt-16 pt-4 md:pt-6 border-t border-line text-[12px] text-muted">
                   {VERSION_TAG}
                 </footer>
               </div>

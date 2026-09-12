@@ -30,33 +30,33 @@ export default function PredictionDetailPage() {
 
   return (
     <div className="max-w-content">
-      <p className="text-[13px] text-muted mb-6">
+      <p className="text-[13px] text-muted mb-4 md:mb-6">
         建卡日期 {formatDateSlash(prediction.createdAt.slice(0, 10))}
       </p>
 
-      <div className="mb-8">
+      <div className="mb-5 md:mb-8">
         <SectionLabel>決策／行動</SectionLabel>
         <p className="font-serif text-[19px] text-ink leading-relaxed">
           {prediction.decisionContent}
         </p>
       </div>
 
-      <div className="mb-8">
+      <div className="mb-5 md:mb-8">
         <SectionLabel>預期結果</SectionLabel>
         <p className="text-[16px] text-ink leading-relaxed">{prediction.expectedOutcome}</p>
       </div>
 
-      <div className="mb-8">
+      <div className="mb-5 md:mb-8">
         <SectionLabel>成功判斷標準</SectionLabel>
         <p className="text-[16px] text-ink leading-relaxed">{prediction.successCriteria}</p>
       </div>
 
-      <div className="mb-8">
+      <div className="mb-5 md:mb-8">
         <SectionLabel>我為什麼認為會成功</SectionLabel>
         <p className="text-[16px] text-ink leading-relaxed">{prediction.successReason}</p>
       </div>
 
-      <div className="mb-10 grid grid-cols-2 sm:grid-cols-4 gap-6">
+      <div className="mb-6 md:mb-10 grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6">
         <div>
           <p className="text-[13px] text-muted mb-1">目前狀態</p>
           <p className="text-[15px] text-ink">
